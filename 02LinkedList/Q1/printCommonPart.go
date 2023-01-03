@@ -1,17 +1,12 @@
 package Q1
 
-import "fmt"
+import (
+	"fmt"
 
-type Node struct {
-	Val  int
-	Next *Node
-}
+	LinkedList "CodeInterviewGuide/02LinkedList"
+)
 
-func New() *Node {
-	return &Node{}
-}
-
-func printCommonPart(head1, head2 *Node) {
+func PrintCommonPart(head1, head2 *LinkedList.Node) {
 	fmt.Println("Common Part: ")
 	for head1 != nil && head2 != nil {
 		if head1.Val == head2.Val {
