@@ -24,8 +24,9 @@ func NewBySlice(nums ...int) *Node {
 }
 
 func (n *Node) Show() {
+	fmt.Print("start:")
 	for n != nil {
-		fmt.Printf("%v ", n.Val)
+		fmt.Printf("->%v ", n.Val)
 		n = n.Next
 	}
 	fmt.Println()
@@ -56,7 +57,7 @@ func NewDoubleBySlice(nums ...int) *DoubleNode {
 
 func (n *DoubleNode) Show() {
 	for n != nil {
-		fmt.Printf("%v ", n.Val)
+		fmt.Printf("<==>%v ", n.Val)
 		n = n.Next
 	}
 	fmt.Println()

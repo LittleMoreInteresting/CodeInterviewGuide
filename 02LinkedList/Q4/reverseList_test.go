@@ -1,4 +1,4 @@
-package Q2
+package Q4
 
 import (
 	"testing"
@@ -6,10 +6,9 @@ import (
 	LinkedList "CodeInterviewGuide/02LinkedList"
 )
 
-func Test_RemoveLastKthNode(t *testing.T) {
+func TestReverseList(t *testing.T) {
 	head := LinkedList.NewBySlice(1, 2, 3, 4, 5)
 	head.Show()
-	//cur := RemoveLastKthNode(head, 6)
-	cur := RemoveLastKthNode01(head, 2)
+	cur := ReverseList(head)
 	cur.Show()
 }
