@@ -23,11 +23,30 @@ func NewBySlice(nums ...int) *Node {
 	return head.Next
 }
 
+func NewRoundBySlice(nums ...int) *Node {
+	head := New()
+	cur := head
+	var next *Node
+	for i := range nums {
+		next = New()
+		next.Val = nums[i]
+		cur.Next = next
+		cur = next
+	}
+	next.Next = head.Next
+	return head.Next
+}
+
 func (n *Node) Show() {
 	fmt.Print("start:")
-	for n != nil {
-		fmt.Printf("->%v ", n.Val)
-		n = n.Next
+	p := n
+	for p != nil {
+		fmt.Printf("->%v ", p.Val)
+		p = p.Next
+		if p == n {
+			fmt.Printf("=>%v ", p.Val)
+			return
+		}
 	}
 	fmt.Println()
 }
