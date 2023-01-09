@@ -46,7 +46,7 @@ func NewDoubleBySlice(nums ...int) *DoubleNode {
 	head := NewDoubleNode()
 	cur := head
 	for i := range nums {
-		next := NewDoubleBySlice()
+		next := NewDoubleNode()
 		next.Val = nums[i]
 		cur.Next = next
 		next.Prev = cur
